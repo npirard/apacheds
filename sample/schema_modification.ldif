@@ -1,0 +1,21 @@
+dn: m-oid=2.16.840.1.113730.3.1.244, ou=attributetypes, cn=inetorgperson, ou=sch
+ ema
+changetype: add
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 2.16.840.1.113730.3.1.244
+m-name: preferredEggnog
+m-description: preferredEggnog user attribute
+m-equality: caseIgnoreMatch
+m-substr: caseIgnoreSubstringsMatch
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+m-noUserModification: FALSE
+
+dn: m-oid=2.16.840.1.113730.3.2.2, ou=objectclasses, cn=inetorgperson, ou=schema
+changetype: modify
+add: m-may
+m-may: preferredEggnog
+
+

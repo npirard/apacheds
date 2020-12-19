@@ -1,0 +1,36 @@
+dn: ads-partitionId=dubois,ou=partitions,ads-directoryServiceId=default,ou=config
+objectclass: top
+objectClass: ads-base
+objectclass: ads-partition
+objectclass: ads-jdbmPartition
+ads-enabled: TRUE
+ads-partitionSuffix: ou=dubois
+ads-contextentry:: ZG46IG91PWR1Ym9pcwpvdTogZHVib2lzCm9iamVjdGNsYXNzOiBkb21haW4Kb2JqZWN0Y2xhc3M6IHRvcAoK
+ads-partitioncachesize: 1000
+ads-partitionsynconwrite: TRUE
+ads-partitionid: dubois
+
+dn: ou=indexes,ads-partitionId=dubois,ou=partitions,ads-directoryServiceId=default,ou=config
+objectclass: top
+objectclass: organizationalUnit
+ou: indexes
+
+dn: ads-indexAttributeId=uid,ou=indexes,ads-partitionId=dubois,ou=partitions,ads-directoryServiceId=default,ou=config
+objectclass: top
+objectclass: ads-base
+objectclass: ads-index
+objectclass: ads-jdbmIndex
+ads-indexAttributeId: uid
+ads-enabled: TRUE
+ads-indexhasreverse: FALSE
+
+dn: ads-indexAttributeId=dc,ou=indexes,ads-partitionId=dubois,ou=partitions,ads-directoryServiceId=default,ou=config
+objectclass: top
+objectclass: ads-base
+objectclass: ads-index
+objectclass: ads-jdbmIndex
+ads-indexAttributeId: dc
+ads-enabled: TRUE
+ads-indexhasreverse: FALSE
+
+

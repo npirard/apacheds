@@ -1,0 +1,16 @@
+version: 1
+
+dn: uid=ADB01,ou=dubois
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Archibald du Bois
+sn: du Bois
+departmentNumber: 00421
+preferredEggnog: rhum and cognac
+givenName: Archibald
+mail: archibalddubois@archibalddubois.fr
+uid: ADB01
+userPassword:: e1NIQX1xVXFQNWN5eG02WWNUQWh6MDVIcGg1Z3Z1OU09
+
