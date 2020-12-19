@@ -8,7 +8,7 @@ In case an LDAP directory is needed, see
 ## Build
 ```
 cd docker
-docker build -t npids .
+docker build -t apacheds .
 ```
 
 
@@ -16,7 +16,7 @@ docker build -t npids .
 
 ### If no modification is needed
 
-`docker run --rm -d --name ldap -p 389:10389 -p 636:10636 npids:latest`
+`docker run --rm -d --name ldap -p 389:10389 -p 636:10636 npirard/apacheds:latest`
 
 ### If some bootstrap modification are needed
 Bootstrap modification LDIF data is to be specified on the `bootstrap` volume
@@ -28,13 +28,13 @@ the LDIF with the modification must be present under bootstrap/schema_modificati
 the LDIF with the partition information must be present under /bootstrap/add_partition.ldif
 
 Example:  
-`docker run -it --rm --name ldap -p 389:10389 -v $PWD/sample:/bootstrap npids:latest`
+`docker run -it --rm --name ldap -p 389:10389 -v $PWD/sample:/bootstrap npirard/apacheds:latest`
 
 ### If some bootstrap data is needed
 The LDIF file must be specified with the BOOTSTRAP_FILE environment variable
 
 Example:  
-`docker run -it --rm --name ldap -p 389:10389 -v $PWD/sample:/bootstrap -e BOOTSTRAP_FILE=/bootstrap/ADB01.ldif npids:latest`
+`docker run -it --rm --name ldap -p 389:10389 -v $PWD/sample:/bootstrap -e BOOTSTRAP_FILE=/bootstrap/ADB01.ldif npirard/apacheds:latest`
 
 *NB* use `docker run -d` if no interest in logs
 
